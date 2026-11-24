@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Natalia Royale — Dos mentiras, una verdad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header><span>♠ &nbsp; NATALIA ROYALE &nbsp; ♦</span><span id="score">ACIERTOS 00 / 05</span></header>
+        <section class="intro">
+            <p class="eyebrow" id="round">RONDA 01 / 05</p>
+            <h1>Dos mentiras.<br><em>Una verdad.</em></h1>
+            <p id="topic">Sistema RAID y restauración de información</p>
+        </section>
+        <section id="selector" class="selector">
+            <p class="eyebrow">SELECCIÓN DEL PARTICIPANTE</p>
+            <h2>Que el azar decida.</h2>
+            <div class="settings"><label>Filas <input id="rows" type="number" min="1" max="30"
+                        value="5"></label><label>Columnas <input id="cols" type="number" min="1" max="30"
+                        value="6"></label><label>Asientos vacíos (fila,columna) <input id="excluded"
+                        placeholder="2,3; 4,1"></label></div>
+            <div class="dice-pair">
+                <div>
+                    <div class="die" id="dieRow">?</div>
+                    <p>FILA</p>
+                </div>
+                <div>
+                    <div class="die" id="dieCol">?</div>
+                    <p>COLUMNA</p>
+                </div>
+            </div>
+            <h3 id="seatResult" aria-live="polite">Lanza los dados para elegir.</h3><button id="roll">⚄ LANZAR
+                DADOS</button>
+            <button id="confirmSeat" disabled>
+                CONFIRMAR PARTICIPANTE ♦
+            </button>
+
+        </section>
+
+        <div class="clock"><strong id="time">20</strong><span>SEGUNDOS</span>
+            <div class="track">
+                <div id="bar"></div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="table-label">♣ &nbsp; LA MESA DE LA VERDAD &nbsp; ♣</div>
+            <section id="cards" aria-label="Afirmaciones"></section>
+        </div>
+        <section id="feedback" hidden aria-live="polite">
+            <div id="reaction"><img id="meme" alt="" hidden><span id="symbol"></span></div>
+            <div>
+                <h2 id="result"></h2>
+                <p id="explanation"></p><small id="next"></small>
+            </div>
+        </section>
+        <footer>
+            <p id="instruction">Encuentra la única afirmación verdadera.</p><button id="play">▶ &nbsp; PLAY</button>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
